@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Ken — Full Stack Developer",
+  title: "Kennedy kitavi — Full Stack Developer",
   description:
     "Professional portfolio of Ken — a passionate full stack developer building impactful digital experiences.",
   keywords: [

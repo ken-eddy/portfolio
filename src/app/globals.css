@@ -19,7 +19,9 @@
 /* ===== LIGHT MODE OVERRIDES ===== */
 [data-theme="light"] {
   --color-background: #f8f9fc;
-  --color-foreground: #1a1a2e;
+  /* --color-foreground: #1a1a2e; */
+  --color-foreground: #252429;
+  
   --color-surface: #ffffff;
   --color-surface-light: #f0f1f5;
   --color-muted: #6b7280;
@@ -146,19 +148,7 @@ body {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-/* Grid pattern background */
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
 
-[data-theme="light"] .grid-pattern {
-  background-image:
-    linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
-}
 
 /* Noise texture overlay */
 .noise-overlay::after {

@@ -14,14 +14,14 @@ const contactInfo = [
     {
         icon: HiMail,
         label: "Email",
-        value: "ken@example.com",
-        href: "mailto:ken@example.com",
+        value: "kitavimuuo@gmail.com",
+        href: "mailto:kitavimuuo@gmail.com",
     },
     {
         icon: HiPhone,
         label: "Phone",
-        value: "+254 700 000 000",
-        href: "tel:+254700000000",
+        value: "+254 710407995",
+        href: "tel:+254710407995",
     },
     {
         icon: HiLocationMarker,
@@ -32,9 +32,9 @@ const contactInfo = [
 ];
 
 const socials = [
-    { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: FaGithub, href: "https://github.com/ken-eddy", label: "GitHub" },
+    // { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    // { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 export default function Contact() {

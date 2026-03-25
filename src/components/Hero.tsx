@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Mouse } from 'lucide-react'
 import { HiArrowDown, HiOutlineDownload } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -43,7 +44,7 @@ export default function Hero() {
                         className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-tight"
                     >
                         <span className="text-foreground">Hi, I&apos;m </span>
-                        <span className="gradient-text">Ken</span>
+                        <span className="gradient-text">Kennedy</span>
                     </motion.h1>
 
                     <motion.p
@@ -97,9 +98,9 @@ export default function Hero() {
                         className="mt-12 flex items-center gap-5"
                     >
                         {[
-                            { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-                            { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                            { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+                            { icon: FaGithub, href: "https://github.com/ken-eddy", label: "GitHub" }
+                            // { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                            // { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
                         ].map((social) => (
                             <a
                                 key={social.label}
@@ -126,9 +127,11 @@ export default function Hero() {
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-6 h-10 rounded-full border-2 border-muted/40 flex items-start justify-center p-1.5"
+                    className="w-6 h-10 rounded-full border-2 border-blue-700 flex items-start justify-center p-1.5"
                 >
-                    <div className="w-1.5 h-2.5 rounded-full bg-muted/60" />
+                    {/* <div className="w-1.5 h-2.5 rounded-full bg-muted/60" /> */}
+            
+                    <Mouse color="blue" />
                 </motion.div>
             </motion.div>
         </section>

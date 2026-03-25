@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX, HiSun, HiMoon } from "react-icons/hi";
 import { useTheme } from "./ThemeProvider";
+import { User } from "lucide-react";
 
 const navLinks = [
     { name: "Home", href: "#home" },
@@ -52,10 +53,10 @@ export default function Navbar() {
                         {/* Logo */}
                         <a href="#home" className="flex items-center gap-2 group">
                             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-white text-sm group-hover:scale-110 transition-transform">
-                                K
+                                <User />
                             </div>
                             <span className="font-semibold text-lg tracking-tight">
-                                <span className="text-foreground">Ken</span>
+                                <span className="text-foreground">Kennedy Kitavi</span>
                                 <span className="text-primary">.</span>
                             </span>
                         </a>

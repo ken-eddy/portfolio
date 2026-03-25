@@ -1,6 +1,7 @@
 "use client";
 
 import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
+import { User } from 'lucide-react'
 
 const footerLinks = [
     { name: "Home", href: "#home" },
@@ -12,8 +13,8 @@ const footerLinks = [
 
 const socials = [
     { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+    // { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    // { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 export default function Footer() {
@@ -25,10 +26,10 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start gap-2">
                         <a href="#home" className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-white text-xs">
-                                K
+                                <User />
                             </div>
                             <span className="font-semibold text-lg">
-                                Ken<span className="text-primary">.</span>
+                                Kennedy kitavi<span className="text-primary">.</span>
                             </span>
                         </a>
                         <p className="text-sm text-muted">
@@ -66,15 +67,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="mt-10 pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-muted">
-                        &copy; {new Date().getFullYear()} Ken. All rights reserved.
-                    </p>
-                    <p className="text-sm text-muted flex items-center gap-1.5">
-                        Made with <FaHeart className="text-red-500 text-xs" /> and lots of coffee
-                    </p>
-                </div>
+             
             </div>
         </footer>
     );
