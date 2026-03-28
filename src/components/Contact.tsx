@@ -1,5 +1,6 @@
 "use client";
 
+import emailjs from '@emailjs/browser'
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
@@ -9,6 +10,7 @@ import {
     HiPaperAirplane,
 } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { datalist } from 'framer-motion/client';
 
 const contactInfo = [
     {
@@ -47,12 +49,73 @@ export default function Contact() {
         message: "",
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Handle form submission
+//    const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault()
+//     try {
+//         const response = await fetch('api/contact', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type':'application/json',
+//             },
+//             body: JSON.stringify(formState),
+//         })
+
+//         const data = await response.json()
+//         if (data.success) {
+//             alert("Thanks for reaching out! I'll get back to you soon.");
+//             setFormState({
+//                 name: '',
+//                 email: '',
+//                 subject: '',
+//                 message: ''
+//             })
+//         } else {
+//             throw new Error(data.error)
+//         }
+//     } catch (error) {
+//         alert('failed to send email')
+//         console.log(error)
+//     }
+//    }
+
+    const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+    // formData.append("access_key", "c25a07c0-617f-435f-b682-f9159b282213");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key:process.env.NEXT_PUBLIC_ACCESS_KEY,
+        name: formState.name,
+        email: formState.email,
+        subject: formState.subject,
+        message: formState.message,
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
         alert("Thanks for reaching out! I'll get back to you soon.");
-        setFormState({ name: "", email: "", subject: "", message: "" });
-    };
+        setFormState({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+            })
+        console.log(data)
+        } else {
+      console.log("Error", data);
+      throw new Error(data.error)
+    }
+    } catch(error) {
+        alert('failed to send email')
+        console.log(error)
+    }
+  };
 
     return (
         <section id="contact" className="relative py-32 overflow-hidden">
